@@ -99,6 +99,7 @@ public class RegistrationFormPageObject {
     }
 
     public RegistrationFormPageObject clickSubmit() {
+        summit.scrollIntoView(false);
         summit.click();
         return this;
     }
