@@ -11,8 +11,8 @@ public class TestForm extends TestBase {
     @Test
     void testForm() {
         step("Заполняем форму регистрации", ()-> {
-            registrationFormPageObject.openPage();
-            registrationFormPageObject.setFirstName("Ivan").
+            registrationFormPageObject.openPage().
+                    setFirstName("Ivan").
                     setLastName("Ivanov").
                     setUserEmail("email@email.com").
                     setGender("Male").

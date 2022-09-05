@@ -34,7 +34,7 @@ public class RegistrationFormPageObject {
     public RegistrationFormPageObject openPage(){
         open("/automation-practice-form");
         form.shouldHave(text(HEADER_FORM_REGISTRATION));
-        return page(RegistrationFormPageObject.class);
+        return this;
     }
 
     public RegistrationFormPageObject setFirstName(String name) {
