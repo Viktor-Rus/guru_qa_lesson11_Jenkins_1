@@ -16,15 +16,24 @@ public class TestBase {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
-
         Configuration.browserCapabilities = capabilities;
-        Configuration.browser = System.getProperty("browser");
-        Configuration.browserVersion = System.getProperty("browserVersion");
+//        System.setProperty("browser_name", "chrome");
+//        System.setProperty("browser_version", "99.0");
+//        System.setProperty("browser_size", "1920x1180");
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = System.getProperty("browserSize");
-        if (System.getProperty("remote") != null) {
+//        if(System.getProperty("remote").equals("true")) {
+            Configuration.browser = "chrome";
+            Configuration.browserVersion = "99.0";
+            Configuration.browserSize = "1920x1180";
             Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-        }
+//            Configuration.browser = System.getProperty("browser_name");
+//            Configuration.browserVersion = System.getProperty("browser_version");
+//            Configuration.browserSize = System.getProperty("browser_size");
+//            Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+//        } else {
+//            Configuration.browser ="chrome";
+//            Configuration.browserSize ="1920x1180";
+//        }
 
     }
 
